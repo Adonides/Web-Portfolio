@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang= 'eng'>
+<head>
+    <meta charset = 'UTF-8'>
+    <meta name= "viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Calculator.css">
+    <script src="Calculator.js"></script>
+</head>
+<body>
+    <!--LOGO---------------------------------->
+    <header>
+        <nav class="navbar">
+            <div class="brand-logo">
+                <p>
+                    <a href="../Portfolio/Portfolio.html">
+                    <img src="../Imagens/logo-32x32.png" alt="Web Projects logo"> WeB.ProJEct$</a>
+                </p>
+            </div>
+    <!--MENU---------------------------------->
+            <div>
+                <a href="#"  class="toggle-btn" onclick="toggleBtn()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+            </div>
+            <div class="navbar-links">
+                <ul>
+                    <li>
+                        <a href="../CaseStudy/index.html">Case Study</a>
+                    </li>
+                    <li>
+                        <a href="../ToDoList/ToDoList.html">Do List</a>
+                    </li>
+                    <li>
+                        <a href="../Budget/Budget.html">Budget</a>
+                    </li>
+                    <li>
+                        <a href="./Calculator.html">Calculator</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Calculator</h1>
+    </header>
+    <main>
+        <div id="calculator">
+
+            <!--Display---------------------------->
+
+            <div id="display">
+                <div id="prev-display"></div>
+                <div id="current-display"></div>
+            </div>
+            
+            <!--BUTTONS---------------------------->
+                   
+            <button onclick="clearBtn()" >C</button>
+            <button onclick="backBtn()" >&lt</button>
+            <button class="btnAction" >%</button>
+            <button class="btnAction" >/</button>
+            <button class="btnNumber" >7</button>        
+            <button class="btnNumber" >8</button> 
+            <button class="btnNumber" >9</button>
+            <button class="btnAction" >*</button>
+            
+            <button class="btnNumber" >4</button>
+            <button class="btnNumber" >5</button> 
+            <button class="btnNumber" >6</button>
+            <button class="btnAction" >-</button>
+            
+            <button class="btnNumber" >1</button>   
+            <button class="btnNumber" >2</button>
+            <button class="btnNumber" >3</button>
+            <button class="btnAction" >+</button>
+
+            <button onclick="squaredBtn()" >x<sup>2</sup></button>
+            <button class="btnNumber" >0</button>
+            <button onclick="decimalBtn()" >.</button> 
+            <button class="btnAction" >=</button>
+            
+        </div>
+    </main>
+    <!--FOOTER----------------------------------->
+    <footer>
+        <p>&copy;Web.ProJEct$</p>
+    </footer>
+    <!--JAVASCRIPT----------------------------------->
+    <script>
+        const btnNumber = document.getElementsByClassName('btnNumber')
+        for (let i in btnNumber) {
+             btnNumber[i].onclick = numberClick
+        }
+
+        const btnAction = document.getElementsByClassName('btnAction')
+        for ( let a in btnAction) {
+           btnAction[a].onclick = actionClick
+        }
+    </script>
+</body>
+</html>

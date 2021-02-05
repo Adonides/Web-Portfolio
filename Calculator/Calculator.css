@@ -1,0 +1,193 @@
+/*Global=================================================*/
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-red:  rgb(122, 26, 26);
+    --light-red: rgb(206, 122, 122);
+    --light-gray:  rgb(221, 219, 219);
+}
+
+html {
+    font-size: 87.5%;
+}
+
+body {
+    font-weight: 400;
+    background-color:  var(--light-gray);
+}
+
+/*NAVBAR=================================================*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-red);
+    font-weight: 100;
+    
+}
+
+.brand-logo a {
+    font-size: 1.4rem;
+    margin: 0.8rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li:hover {
+    background: var(--light-red);
+}
+
+/*Links=========================================================*/
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    margin: 0.8rem;
+    padding: 1rem;
+    display: block;
+}
+
+/*Toggle=========================================================*/
+.toggle-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-btn .bar {
+    height: 2px;
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+}
+
+/*TITLES==============================================*/
+h1 {
+    font-size: calc(4vw + 1.75rem);
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 10px;
+    margin-top: -1.3rem;
+    margin-bottom: -0.3rem;
+    color: rgb(0, 0, 0, 0.1)
+}
+
+/*CALCULATOR=================================================*/
+
+
+
+#calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: minmax(80px, auto) repeat(5, 70px);
+    /*tamanho minimo e maximo sem limite dependendo do texto*/
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+/*DISPLAY=================================================*/
+
+#display {
+    grid-column: 1 / -1; /* da primera coluna até a ultima*/
+    background-color: rgba(0, 0, 0, 0.60);
+    display: flex;
+    align-items: flex-end; /* alinhar embaixo da caixa*/
+    justify-content: space-around;
+    flex-direction: column; 
+    padding: 5px;
+    
+    word-wrap: break-word;
+    word-break: break-all; /*quebrar para proxima linha se preciso*/
+}
+
+#display #prev-display {
+    color: var(--light-gray);
+    font-size: 1.5rem;
+}
+
+#display #current-display{
+    color: white;
+    font-size: 2.5rem;
+}
+
+/*BUTTONS=================================================*/
+#calculator button {
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: var(--light-gray);
+    border: 1px solid var(--dark-red);
+    outline: none;
+    background-color: rgb(206, 122, 122);
+}
+
+#calculator button:hover {
+    background-color: var(--dark-red);
+}
+
+/*FOOTER==============================================*/
+footer {
+    text-align: center;
+    color: var(--dark-blue);
+    opacity: 0.6;
+    margin: 1.5rem;
+}
+
+/*RESPONSIVE=================================================*/
+@media(max-width: 610px) {
+    .toggle-btn {
+        display: flex;
+    }
+
+    .navbar  {
+        flex-direction: column;
+    }
+
+    .brand-logo {
+        margin-top: 0.5rem;
+    }
+
+    .navbar-links {
+        display: none;
+    }
+
+    .navbar-links li a {
+        padding: 0.5rem 0.5rem;
+        margin-left: 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/*RESPONSIVE.body==============================================*/
+@media (min-width: 610px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+

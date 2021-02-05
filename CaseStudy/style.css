@@ -1,0 +1,113 @@
+/*Global==========================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+a, li {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    font-family: 'Poppins', sans-serif;
+}
+
+.focus {
+    min-height: 100vh;
+    background: url("../Imagens/bedroom\ Office\ 1280x811.jpg");
+    background-size: cover;
+    padding: 0rem 5rem; /*0top botton 5 dos lados*/
+}
+/*NAVBAR==========================================*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.2rem;
+}
+
+
+.links {
+    display: flex;
+}
+
+.links li {
+    padding-left: 10rem;
+    font-size: 1rem;
+}
+
+.links li a:hover{
+    color: rgb(235, 137, 57);
+    opacity: 0.5;
+}
+/*HOME==========================================*/
+h1 {
+    position: absolute; /*pode mover para onde quiser*/
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%); /*perfeito centralizado*/
+    font-family: 'Lobster', cursive;
+    font-weight: lighter;
+    font-size: 5rem;
+    
+}
+
+h1 a {
+    color: rgb(235, 137, 57);
+}
+
+h1 a:hover {
+   
+    border-radius: 12px;
+    opacity: 0.5;
+}
+
+.intro {
+    background: black;
+    position: fixed; /*pode mover para onde quiser*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    background: rgb(199, 160, 89);
+    position: fixed; /*pode mover para onde quiser*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%) /*colocar atraz de tudo*/
+}
+
+.intro-text {
+    color: rgb(235, 137, 57);
+    font-family: 'Heebo', sans-serif;
+    font-size: 3rem;
+}
+
+.hide {
+    background: black;
+    overflow: hidden;
+}
+
+.hide span {
+    transform: translateY(100%);
+    display: inline-block; /*permite mover span elemento*/
+}
+
+/*RESPONSIVE.HOME==========================================*/
+
+/*FOOTER==========================================*/
