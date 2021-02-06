@@ -19,7 +19,7 @@ main {
 
 .focus {
     min-height: 100vh;
-    background: url("../Imagens/bedroom\ Office\ 1280x811.jpg");
+    background: url("../../Imagens/bedroom\ Office\ 1280x811.jpg");
     background-size: cover;
     padding: 0rem 5rem; /*0top botton 5 dos lados*/
 }
@@ -45,7 +45,7 @@ nav {
 }
 
 .links li a:hover{
-    color: rgb(235, 137, 57);
+    color: rgb(155, 77, 13);
     opacity: 0.5;
 }
 /*HOME==========================================*/
