@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../Imagens/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap" rel="stylesheet">
     <title>Budget</title>
@@ -11,33 +11,35 @@
     <script defer src="Budget.js"></script>
 </head>
 <body>
-    <!------------------------HEADER-------------------------------->
+
+    <!------------------------NAVBAR-------------------------------->
+    <nav class="navbar">
+        <div class="logo">
+            <p>
+                <a href="../../Portfolio.html" rel="prev">
+                    <img src="../../Imagens/logo-32x32.png" alt="Logo WeB Projests">
+                    WeB.ProJEct$
+                </a>
+            </p>
+        </div>
+        <a href="#" class="toggle-bar" onclick="toggleBtn()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-list">
+            <ul>
+                <li><a href="../CaseStudy/index.html" rel="next">Case Study</a></li>
+                <li><a href="../ToDoList/ToDoList.html" rel="next">Do List</a></li>
+                <li><a href="./Budget.html">Budget</a></li>
+                <li><a href="../Calculator/Calculator.html" rel="next">Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <p>
-                    <a href="../../Portfolio.html" rel="prev">
-                        <img src="../../Imagens/logo-32x32.png" alt="Logo WeB Projests">
-                        WeB.ProJEct$
-                    </a>
-                </p>
-            </div>
-            <a href="#" class="toggle-bar" onclick="toggleBtn()">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </a>
-            <div class="navbar-list">
-                <ul>
-                    <li><a href="../CaseStudy/index.html" rel="next">Case Study</a></li>
-                    <li><a href="../ToDoList/ToDoList.html" rel="next">Do List</a></li>
-                    <li><a href="./Budget.html">Budget</a></li>
-                    <li><a href="../Calculator/Calculator.html" rel="next">Calculator</a></li>
-                </ul>
-            </div>
-        </nav>
         <h1>Budget</h1>
     </header>
+
     <!------------------------DISPLAY-------------------------------->
     <main class="container">
         <section id="statement">
@@ -63,14 +65,42 @@
                     </h3>
                     <p id="viewTotal">0,00</p>
                 </div>
-        </section>   
+        </section>
+
+        <!------------------------MONTH-------------------------------->
+        <Section id="month">
+            <div class="transaction-month">
+                <h2 class="sr-only">Period</h2>
+                <h3>Month Of Transaction</h3>
+                <ul class="all-months">
+                    <li class="active-month">January</li>
+                    <li>Febrery</li>
+                    <li>March</li>
+                </ul>
+    
+                <form action="" class="form-month">
+                    <div class="input-month">
+                        <label for="period per month" class="sr-only">Period per Month</label>
+                        <input type="text" 
+                            class="new-month"
+                            placeholder="Add a month">
+                        <button class="btn-month" aria-label="add new month">+</button>
+                    </div>
+                </form>
+            </div>
+        </Section>   
+        
         <!------------------------MODAL-BTN-------------------------------->
         <section id="transfer">
             <h2 class="sr-only">
                 Transaction
             </h2>
 
-            <a href="#" class="button new" onclick="Modal.open()">+ New Transaction</a>
+            <div class="btns-new-delete">
+                <a href="#" class="new btn-transaction " onclick="Modal.open()">+ New Transaction</a>
+    
+                <a href="#" class="new delete-transactions">- Delete all Transactions</a>
+            </div>
         <!------------------------TABELA-------------------------------->
             <table id="data-table">
                 <thead>
@@ -125,7 +155,7 @@
     <!-----------------------Modal-Overlay-Buttons----------------->
                      <div class="input-group actions">
                         <a href="#" onclick="Modal.close()" class="button cancel">Cancel</a>
-                        <button>Submit</button>
+                        <button class="btn-submit">Submit</button>
                      </div>
                  </form>
             </div>
