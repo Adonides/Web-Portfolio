@@ -2,9 +2,14 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    
-    
+    box-sizing: border-box; 
+}
+
+:root {
+    --dark-orange: rgb(247, 114, 6);
+    --orange: rgb(235, 137, 57);
+    --light-orange: rgb(199, 160, 89);
+    --text-bg: #f9f9f9;
 }
 
 a, li {
@@ -17,12 +22,6 @@ main {
     font-family: 'Poppins', sans-serif;
 }
 
-.focus {
-    min-height: 100vh;
-    background: url("../../Imagens/bedroom\ Office\ 1280x811.jpg");
-    background-size: cover;
-    padding: 0rem 5rem; /*0top botton 5 dos lados*/
-}
 /*NAVBAR==========================================*/
 nav {
     display: flex;
@@ -49,7 +48,15 @@ nav {
     opacity: 0.5;
 }
 /*HOME==========================================*/
-h1 {
+.section-focus {
+    position: relative;
+    min-height: 100vh;
+    background: url("../../Imagens/bedroom\ Office\ 1280x811.jpg");
+    background-size: cover;
+    padding: 0rem 5rem; /*0top botton 5 dos lados*/
+}
+
+.main-title {
     position: absolute; /*pode mover para onde quiser*/
     top: 30%;
     left: 50%;
@@ -60,16 +67,214 @@ h1 {
     
 }
 
-h1 a {
-    color: rgb(235, 137, 57);
+.main-title a {
+    color: var(--orange);
+    cursor: default;
 }
 
-h1 a:hover {
-   
+.main-title a:hover {
+    font-size: 5.5rem;
     border-radius: 12px;
-    opacity: 0.5;
+    
 }
 
+.section-focus .home-subtitle {
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-80%);
+    font-weight: 600;
+    font-size: 1.5rem;
+    border: 1;
+    opacity: 0.5;
+    transition: 0.3s ease-in;
+}
+
+.section-focus .home-subtitle:hover {
+    opacity: 1;
+}
+
+.section-focus p {
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    cursor: default;
+}
+
+/*ARTICLE01==========================================*/
+#article01 {
+    padding: 1em 0;
+    border-top: 8px solid #222;
+    background: var(--text-bg);
+    color: #333;
+    font-size: 1.125em; /* 18px / 16px */
+}
+
+.wrap-article {
+    margin: 0 auto;
+    max-width: 58%; /*centralizar texto*/
+}
+
+#article01 h2 {
+    font-size: 4em; /* 72px / 16px */
+    line-height: 1.1;
+    margin-top: 1rem;
+}
+
+.date {
+    font-weight: 100;
+}
+
+#article01 h3 {
+    margin: 1em 0 .8em 0;
+    color:var(--orange);
+    font-size: 2em; /*36px / 16px*/
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+#article01 h4 {
+    margin: .8em 0 -.7em 0;
+    color: #222;
+    font-size: 1.333em;
+}
+
+#article01 p {
+    margin: .8em 0;
+}
+
+.comment-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 3px solid var(--orange);
+    color: var(--orange);
+    margin: 2rem 8rem 5rem 8rem ;
+    padding: 0.3rem;
+}
+
+.comment-link:hover {
+    background: Var(--orange);
+    color: var(--text-bg);
+}
+
+/*COMMENTS==========================================*/
+.comment-section {
+    background-image: linear-gradient(120deg, var(--light-orange), var(--orange) );
+    color: white;
+    min-height: 100vh;
+}
+
+.comment-title {
+    font-size: 3em;
+    font-weight: 100;
+}
+
+.comment-title, .form-comment {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-comment, .btn-comment {
+    padding: 0.5rem;
+    font-size: 1em;
+    border: none;
+}
+
+.comment-text {
+    display: block;
+    max-width: 50%;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 20px 40px;
+    border: none;
+    outline: none;
+    transition: 0.6s;
+}
+
+.comment-text:focus {
+    box-shadow: 0 0 10px 4px var(--dark-orange);
+}
+
+.btn-comment {
+    background: rgb(109, 92, 77);
+    color: var(--text-bg);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.btn-comment:hover {
+    background: var(--dark-orange);
+    color: var(--text-bg); 
+}
+
+.comment-area {
+    height: 7rem;
+}
+
+.comment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-list {
+    
+    min-width: 30%;
+    max-width: 75%;
+}
+
+.comment {
+    position: relative;
+    background: var(--text-bg);
+    color: var(--light-orange);
+    margin: 0.5rem;
+    padding: 0 0.6rem;
+}
+
+.user-name {
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 0.3rem 0;
+}
+.post-date {
+    font-style: italic;
+    font-size: 0.8em;
+    font-family: 'Lobster', cursive;
+    color: var(--light-orange);
+}
+
+.user-comment {
+    font-size: 0.9em;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem 2rem 1rem; 
+}
+
+.btn-reply {
+    position: absolute;
+    bottom: 5px;
+    right: 8px;
+    background: rgb(109, 92, 77);
+    border: none;
+    color: var(--text-bg);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    padding: 0.4rem 0.4rem 0.3rem 0.4rem;
+    margin-bottom: 0.1rem;
+    
+}
+
+.btn-reply:hover {
+    background: var(--dark-orange);
+    color: var(--text-bg); 
+}
+
+/*INTRO ANIMATION==========================================*/
 .intro {
     background: black;
     position: fixed; /*pode mover para onde quiser*/
@@ -83,7 +288,7 @@ h1 a:hover {
 }
 
 .slider {
-    background: rgb(199, 160, 89);
+    background: var(--light-orange);
     position: fixed; /*pode mover para onde quiser*/
     top: 0;
     left: 0;
@@ -92,8 +297,8 @@ h1 a:hover {
     transform: translateY(100%) /*colocar atraz de tudo*/
 }
 
-.intro-text {
-    color: rgb(235, 137, 57);
+.intro-container {
+    color: var(--orange);
     font-family: 'Heebo', sans-serif;
     font-size: 3rem;
 }
@@ -108,6 +313,36 @@ h1 a:hover {
     display: inline-block; /*permite mover span elemento*/
 }
 
-/*RESPONSIVE.HOME==========================================*/
+/*RESPONSIVE.NAVBAR==========================================*/
+/*@media ( min-width: 660px) {
+   
+
+    .links li a{
+        display: flex;
+        
+        
+        
+    }
+}*/
+/*RESPONSIVE.ARCTICLE==========================================*/
+@media screen and (max-width: 600px){
+    #article01 {
+        font-size: 1em; /*diminuir a fonte*/
+    }
+
+    .wrap-article {
+        max-width: 85%; /*diminuir os espaços laterais*/
+    }
+
+    .comment-text {
+        max-width: 80%;
+    }
+} /*mais espaço paro o texto em telas menores*/
+
+ /* @media screen and (min-width: 980px){
+ .wrap {
+        max-width: 600px; manter fixa espaço entre as letras
+    } 
+}/* espaço entre as letras aumenta em tela grandes*/ */
 
 /*FOOTER==========================================*/

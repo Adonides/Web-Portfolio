@@ -3,55 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../Imagens/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../Imagens/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,900;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <title>Bedroom Office</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous">
+    </script>
+    <script defer src="./script.js"></script>
 </head>
 <body>
     <main>
-        <section class="focus">
+        <section class="section-focus">
+        <!----------------NAVERGATION BAR------------------->
                 <nav>
                     <div class="logo">
                         <a href="../../Portfolio.html">
-                            <img src="../../Imagens/logo-32x32.png" alt="logo AA Web Projects"> WeB.ProJEct$
+                            <img src="../../Imagens/logo-32x32.png" alt="logo AA Web Projects">
                         </a>
                     </div>
                     <ul class="links">
-                        <li><a href="#">About me</a></li>
-                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Articles</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
-                <h1><a href="">Stay Focus</a></h1>
+        <!----------------HOME------------------->
+                <div>
+                    <header>
+                        <h1 class="main-title"><a href="#">Stay Focus</a></h1>
+                    </header>
+                    <p>
+                        Taught self can be hard, but remenber it:
+                    </p>
+                    <h2 class="home-subtitle"> <a href="#article01">
+                        Happiness is the key for Happiness
+                    </a></h2>
+                   
+                </div>
         </section>
-        <hr>
-        <section class="work"></section>
+        <hr><!----------------Article------------------->
+        <article class="article01" id="article01">
+            <section class="wrap-article">
+                <h2>The Future of Education</h2>
+                <p class="date"><small><em>March 01, 2021</em></small></p>
+                <h3>
+                    Before enrolling a college or online curse, we got to think what is the best method to learn X or Z.
+                </h3>
+                <p>
+                      Is the traditional way the better option and what to say about online learning? In this article I will run over through those questions and give my sincere opinion about it.
+                </p>
+                <h4>Traditional Education</h4>
+                <p>
+                    For more I think about learning, less I become excited about traditional learning, if you ask me it is about to follow one pattern, a routine and most of the time to be forced to learning things you are not interesting and much worse, it will not be necessary for your career at all.  It is a very expense investment and require you to move around to be where the class will take over.
+                </p>
+                <p>
+                    The strongest defend to traditional learning would be the network, programs and internships offered from those institutes who has the power to partnership with companies. Oh yeah but those benefices are not for every alumnus, the most the time just few students are including to it. No really, the main aspect I would pick from the traditional education is the structure, I say it because there are some subjects, career we must use expense equipment, and the easiest example is to study medicine, I would say it is almost impossible to buy it to have a private laboratory. Even tough partial online curse would to the job!
+                </p>
+                <h4>Online Learning</h4>
+                <p>
+                    It can be so powerful, all we need to achieve that is a routine, like we do on the traditional learning, yeah exactly to have a specific time to study, manage the time could be the main point you will fail to have a success experience with online curse.
+                </p>
+                <p>
+                    This kind of mind is what I like, in this point you push yourself for another level! Because you are starting a become the boss of your learning, managing your time and being more independent, in some online curses you got classes on video and even you may interact with the lecture. The cool thing is you are managing a bit your flexible timetable, paying much less and you still have some support of the institution.
+                </p>
+
+
+                <a href="#comments" class="comment-link">Your Opinion</a>
+            </section>
+        </article>
+        <hr><!----------------COMMENTS------------------->
+        <section class="comment-section" id="comments">
+            <form class="form-comment">
+                <h2 class="comment-title">Leave a Comment</h2>
+                <input type="text" class="comment-name comment-text" id="comments-name" placeholder="Your name">
+                <textarea class="comment-area comment-text" name="" id="comments-area" cols="30" rows="10" placeholder="Let everyone knows your option "></textarea>
+                <button class="btn-comment" id="comment-btn" type="submit">Post Comment</button>
+            </form>
+            
+            <div class="comment-container" id="container-id">
+                <ul class="comment-list">
+
+               
+                        
+                </ul>
+            </div>
+        </section>
+        <hr><!----------------FOOTER------------------->
+        <section class="footer">
+            <footer>
+                <p>&copy;WeB.ProJEct$</p>
+                <p><small>Background photo from <strong>Tatiana Syrikova</strong> no Pexels</small></p>
+            </footer>
         </section>
     </main>
         
-        <div class="intro">
-            <div class="intro-text">
-                <h2 class="hide">
-                    <span class="text">for taught self learners</span>
-                </h2>
-                <h2 class="hide">
-                    <span class="text"> for everyday</span>
-                </h2>
-                <h2 class="hide">
-                    <span class="text">challenge.</span>
-                </h2>
-            </div>
+    <div class="intro">
+        <div class="intro-container">
+            <h2 class="hide">
+                <span class="intro-text">for taught self learners</span>
+            </h2>
+            <h2 class="hide">
+                <span class="intro-text">for everyday</span>
+            </h2>
+            <h2 class="hide">
+                <span class="intro-text">challenge.</span>
+            </h2>
         </div>
-        <div class="slider"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous">
-    </script>
-    <script src="script.js"></script>
-    <footer>
-        <p>&copy;WeB.ProJEct$</p>
-        <p><small>Backgroung photo from <strong>Tatiana Syrikova</strong> no Pexels</small></p>
-    </footer>
+    </div>
+    <div class="slider"></div>
+    
 </body>
 </html>
